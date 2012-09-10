@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>How to use the captcha class</title>
+    </head>
+    <body>
+        <div style="width: 600px; margin: 0 auto;" id="top">
+            <h1 align="center">Die Captcha Class</h1>
+            <h4 align="center">Gonna captch'em all!</h4>
+            <p>
+                This class lets you easily create some Captchas for securing your logins or
+                register or any else formulars you want protect against robots or spam.
+            </p>
+            <h3>Download the Zip-Folder(example including)</h3>
+            <a href="all.zip">Download Click Here!</a>
+            <h3>How to use?</h3>
+            <ol>
+                <li>Insert an image-tag at the website which has a php-file as source.</li>
+                <li>Initialise the CaptchaClass in the php-file which u use as image.</li>
+                <li>Call the generateImage-function in the instance.</li>
+                <li>
+                    The php-file which validates the formData needs to use the CaptchaClass and use the compareCaptcha-function,
+                    to validate if the entered captcha equals the generated picture.
+                </li>
+            </ol>
+            <h3>Requirements:</h3>
+            <ul>
+                <li>SESSION have to be started before initialising the Class</li>
+                <li>You need a Font File for rendering the Text.</li>
+            </ul>
+            <h3>How to set the Font-File as using Font (4 options):</h3>
+            <ul>
+                <li>
+                    Use the first parameter of the constructor:<br/>
+                    <i><b>$captcha = new Captcha('FreeSans.ttf');<br/>$captcha->generateImage();</b></i>
+                </li>
+                <li>
+                    Use the second parameter of the generateImage-Function:<br/>
+                    <i><b>$captcha = new Captcha();<br/>$captcha->generateImage('FreeSans.ttf');</b></i>
+                </li>
+                <li>
+                    Set it with the setFont-Function:<br/>
+                    <i><b>$captcha = new Captcha();<br/>$captcha->setFont('FreeSans.ttf');<br/>$captcha->generateImage();</b></i>
+                </li>
+                <li>
+                    Set it manually:<br/>
+                    <i><b>$captcha = new Captcha();<br/>$captcha->font = 'FreeSans.ttf';<br/>$captcha->generateImage();</b></i>
+                </li>
+            </ul>
+            <br/><br/>
+            <h3>Test it yourself!</h3>
+            <a href="index.php" target="_BLANK">To test-formular</a>
+            <br/><br/>
+            <h3><a href="#top">Scroll Top!</a></h3>
+        </div>
+    </body>
+</html>
